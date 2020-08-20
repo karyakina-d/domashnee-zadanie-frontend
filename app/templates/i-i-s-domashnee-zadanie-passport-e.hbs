@@ -65,15 +65,19 @@
     {{flexberry-validationmessage error=(v-get validationObject "sex" "messages")}}
   </div>
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-domashnee-zadanie-passport-e.dateOfBirth-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.dateOfBirth
       class=(if (v-get validationObject "dateOfBirth" "isInvalid") "error")
-      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.dateOfBirth-caption")
       data-test-i-i-s-domashnee-zadanie-passport-e------------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "dateOfBirth" "messages")}}
   </div>
+
   <div class="field">
     {{flexberry-field
       readonly=readonly
@@ -85,25 +89,33 @@
     {{flexberry-validationmessage error=(v-get validationObject "placeOfBirth" "messages")}}
   </div>
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-domashnee-zadanie-passport-e.dateOfIssue-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.dateOfIssue
       class=(if (v-get validationObject "dateOfIssue" "isInvalid") "error")
-      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.dateOfIssue-caption")
       data-test-i-i-s-domashnee-zadanie-passport-e------------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "dateOfIssue" "messages")}}
   </div>
+
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-domashnee-zadanie-passport-e.validUntil-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.validUntil
       class=(if (v-get validationObject "validUntil" "isInvalid") "error")
-      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.validUntil-caption")
       data-test-i-i-s-domashnee-zadanie-passport-e-----------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "validUntil" "messages")}}
   </div>
+
   <div class="field">
     {{flexberry-field
       readonly=readonly

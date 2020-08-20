@@ -6,27 +6,27 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 import tCountryEnum from '../../../enums/i-i-s-domashnee-zadanie-t-country';
 
 export let Model = Mixin.create({
-  lastNameLat: DS.attr('string'),
   firstNameLat: DS.attr('string'),
+  lastNameLat: DS.attr('string'),
   secondNameLat: DS.attr('string'),
   sex: DS.attr('string'),
-  dateOfBirth: DS.attr('string'),
+  dateOfBirth: DS.attr('date'),
   placeOfBirth: DS.attr('string'),
-  dateOfIssue: DS.attr('string'),
-  validUntil: DS.attr('string'),
+  dateOfIssue: DS.attr('date'),
+  validUntil: DS.attr('date'),
   numberSeries: DS.attr('string'),
   country: DS.attr('i-i-s-domashnee-zadanie-t-country', { defaultValue: tCountryEnum.Empty })
 });
 
 export let ValidationRules = {
-  lastNameLat: {
-    descriptionKey: 'models.i-i-s-domashnee-zadanie-passport.validations.lastNameLat.__caption__',
+  firstNameLat: {
+    descriptionKey: 'models.i-i-s-domashnee-zadanie-passport.validations.firstNameLat.__caption__',
     validators: [
       validator('ds-error'),
     ],
   },
-  firstNameLat: {
-    descriptionKey: 'models.i-i-s-domashnee-zadanie-passport.validations.firstNameLat.__caption__',
+  lastNameLat: {
+    descriptionKey: 'models.i-i-s-domashnee-zadanie-passport.validations.lastNameLat.__caption__',
     validators: [
       validator('ds-error'),
     ],
@@ -47,6 +47,7 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-domashnee-zadanie-passport.validations.dateOfBirth.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   placeOfBirth: {
@@ -59,12 +60,14 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-domashnee-zadanie-passport.validations.dateOfIssue.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   validUntil: {
     descriptionKey: 'models.i-i-s-domashnee-zadanie-passport.validations.validUntil.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   numberSeries: {

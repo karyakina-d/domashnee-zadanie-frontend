@@ -16,6 +16,15 @@
       "ordered": false
     },
     {
+      "name": "validUntil",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
       "name": "number",
       "type": "string",
       "flexberryType": "string",
@@ -25,18 +34,9 @@
       "ordered": false
     },
     {
-      "name": "validUntil",
-      "type": "string",
-      "flexberryType": "date",
-      "notNull": false,
-      "defaultValue": "",
-      "stored": true,
-      "ordered": false
-    },
-    {
       "name": "issueDate",
-      "type": "string",
-      "flexberryType": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,

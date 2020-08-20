@@ -66,11 +66,11 @@ export default {
     }
   },
   validations: {
-    lastNameLat: {
-      __caption__: 'lastNameLat'
-    },
     firstNameLat: {
       __caption__: 'firstNameLat'
+    },
+    lastNameLat: {
+      __caption__: 'lastNameLat'
     },
     secondNameLat: {
       __caption__: 'secondNameLat'

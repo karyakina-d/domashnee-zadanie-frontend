@@ -9,13 +9,13 @@ import tServiceRequestDecisionEnum from '../../../enums/i-i-s-domashnee-zadanie-
 export let Model = Mixin.create({
   type: DS.attr('i-i-s-domashnee-zadanie-t-service-request-type', { defaultValue: tServiceRequestTypeEnum.Empty }),
   number: DS.attr('number'),
-  date: DS.attr('string'),
+  date: DS.attr('date'),
   status: DS.attr('i-i-s-domashnee-zadanie-t-service-request-status'),
   permanentAddress: DS.attr('string'),
   phoneNumber: DS.attr('string'),
   iNN: DS.attr('string'),
   serviceRequestDecision: DS.attr('i-i-s-domashnee-zadanie-t-service-request-decision', { defaultValue: tServiceRequestDecisionEnum.Empty }),
-  decisionDate: DS.attr('string'),
+  decisionDate: DS.attr('date'),
   profession: DS.belongsTo('i-i-s-domashnee-zadanie-profession', { inverse: null, async: false }),
   passport: DS.belongsTo('i-i-s-domashnee-zadanie-passport', { inverse: null, async: false }),
   patent: DS.hasMany('i-i-s-domashnee-zadanie-patent', { inverse: 'serviceRequest', async: false })
@@ -39,6 +39,7 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-domashnee-zadanie-service-request.validations.date.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   status: {
@@ -75,6 +76,7 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-domashnee-zadanie-service-request.validations.decisionDate.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   profession: {

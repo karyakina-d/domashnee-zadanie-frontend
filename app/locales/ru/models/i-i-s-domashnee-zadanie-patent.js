@@ -25,11 +25,11 @@ export default {
     series: {
       __caption__: 'Series'
     },
-    number: {
-      __caption__: 'Number'
-    },
     validUntil: {
       __caption__: 'Valid until'
+    },
+    number: {
+      __caption__: 'Number'
     },
     issueDate: {
       __caption__: 'Issue date'

@@ -6,9 +6,9 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 
 export let Model = Mixin.create({
   series: DS.attr('string'),
+  validUntil: DS.attr('date'),
   number: DS.attr('string'),
-  validUntil: DS.attr('string'),
-  issueDate: DS.attr('string'),
+  issueDate: DS.attr('date'),
   profession: DS.belongsTo('i-i-s-domashnee-zadanie-profession', { inverse: null, async: false }),
   serviceRequest: DS.belongsTo('i-i-s-domashnee-zadanie-service-request', { inverse: 'patent', async: false })
 });
@@ -20,14 +20,15 @@ export let ValidationRules = {
       validator('ds-error'),
     ],
   },
-  number: {
-    descriptionKey: 'models.i-i-s-domashnee-zadanie-patent.validations.number.__caption__',
-    validators: [
-      validator('ds-error'),
-    ],
-  },
   validUntil: {
     descriptionKey: 'models.i-i-s-domashnee-zadanie-patent.validations.validUntil.__caption__',
+    validators: [
+      validator('ds-error'),
+      validator('date'),
+    ],
+  },
+  number: {
+    descriptionKey: 'models.i-i-s-domashnee-zadanie-patent.validations.number.__caption__',
     validators: [
       validator('ds-error'),
     ],
@@ -36,6 +37,7 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-domashnee-zadanie-patent.validations.issueDate.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   profession: {

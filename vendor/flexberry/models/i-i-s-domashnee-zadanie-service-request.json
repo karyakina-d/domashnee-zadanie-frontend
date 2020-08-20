@@ -26,8 +26,8 @@
     },
     {
       "name": "date",
-      "type": "string",
-      "flexberryType": "Date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -45,7 +45,7 @@
     {
       "name": "permanentAddress",
       "type": "string",
-      "flexberryType": "String",
+      "flexberryType": "string",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -54,7 +54,7 @@
     {
       "name": "phoneNumber",
       "type": "string",
-      "flexberryType": "String",
+      "flexberryType": "string",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -63,7 +63,7 @@
     {
       "name": "iNN",
       "type": "string",
-      "flexberryType": "String",
+      "flexberryType": "string",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -80,8 +80,8 @@
     },
     {
       "name": "decisionDate",
-      "type": "string",
-      "flexberryType": "Date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,

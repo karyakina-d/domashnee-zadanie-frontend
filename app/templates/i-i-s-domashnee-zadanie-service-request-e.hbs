@@ -44,15 +44,19 @@
     {{flexberry-validationmessage error=(v-get validationObject "number" "messages")}}
   </div>
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.date-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.date
       class=(if (v-get validationObject "date" "isInvalid") "error")
-      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.date-caption")
       data-test-i-i-s-domashnee-zadanie-service-request-e-----=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "date" "messages")}}
   </div>
+
   <div class="field" data-test-i-i-s-domashnee-zadanie-service-request-e-------="true">
     <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.status-caption"}}</label>
     {{flexberry-dropdown
@@ -102,15 +106,19 @@
     {{flexberry-validationmessage error=(v-get validationObject "serviceRequestDecision" "messages")}}
   </div>
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.decisionDate-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.decisionDate
       class=(if (v-get validationObject "decisionDate" "isInvalid") "error")
-      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.decisionDate-caption")
       data-test-i-i-s-domashnee-zadanie-service-request-e-------------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "decisionDate" "messages")}}
   </div>
+
   <div class="field">
     <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.profession-caption"}}</label>
     {{flexberry-lookup

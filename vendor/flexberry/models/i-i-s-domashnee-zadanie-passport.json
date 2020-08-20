@@ -7,7 +7,7 @@
   "parentClassName": null,
   "attrs": [
     {
-      "name": "lastNameLat",
+      "name": "firstNameLat",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
@@ -16,7 +16,7 @@
       "ordered": false
     },
     {
-      "name": "firstNameLat",
+      "name": "lastNameLat",
       "type": "string",
       "flexberryType": "string",
       "notNull": false,
@@ -44,8 +44,8 @@
     },
     {
       "name": "dateOfBirth",
-      "type": "string",
-      "flexberryType": "Date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -62,8 +62,8 @@
     },
     {
       "name": "dateOfIssue",
-      "type": "string",
-      "flexberryType": "Date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -71,8 +71,8 @@
     },
     {
       "name": "validUntil",
-      "type": "string",
-      "flexberryType": "Date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
