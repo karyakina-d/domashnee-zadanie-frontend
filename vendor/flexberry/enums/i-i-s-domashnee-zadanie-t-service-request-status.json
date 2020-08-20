@@ -1,0 +1,11 @@
+﻿{
+  "nameSpace": "IIS.Domashnee_zadanie",
+  "className": "tServiceRequestStatus",
+  "enumObjects": {
+    "Empty": null,
+    "New": null,
+    "InProcess": null,
+    "Closed": null,
+    "Canceled": null
+  }
+}

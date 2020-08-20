@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-domashnee-zadanie-profession-e",
+  "editForm": "i-i-s-domashnee-zadanie-profession-e",
+  "external": false,
+  "caption": "Profession",
+  "name": "IISDomashnee_zadanieProfessionL",
+  "className": "ProfessionL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-domashnee-zadanie-profession",
+      "modelProjection": "ProfessionL"
+    }
+  ]
+}

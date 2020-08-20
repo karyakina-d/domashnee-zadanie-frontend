@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Profession",
+      "projection": "ProfessionL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Passport",
+      "projection": "PassportL",
+      "detailModelName": null
+    },
+    {
+      "master": "profession",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "Patent.Profession",
+      "projection": "ProfessionL",
+      "detailModelName": "i-i-s-domashnee-zadanie-patent"
+    }
+  ],
+  "external": false,
+  "caption": "Service request",
+  "name": "IISDomashnee_zadanieServiceRequestE",
+  "className": "ServiceRequestE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-domashnee-zadanie-service-request",
+      "modelProjection": "ServiceRequestE"
+    }
+  ]
+}

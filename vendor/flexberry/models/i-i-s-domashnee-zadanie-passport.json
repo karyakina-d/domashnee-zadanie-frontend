@@ -1,0 +1,243 @@
+﻿{
+  "name": "IISDomashnee_zadaniePassport",
+  "modelName": "i-i-s-domashnee-zadanie-passport",
+  "className": "Passport",
+  "nameSpace": "IIS.Domashnee_zadanie",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "lastNameLat",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "firstNameLat",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "secondNameLat",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "sex",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dateOfBirth",
+      "type": "string",
+      "flexberryType": "Date",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "placeOfBirth",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dateOfIssue",
+      "type": "string",
+      "flexberryType": "Date",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "validUntil",
+      "type": "string",
+      "flexberryType": "Date",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "numberSeries",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "country",
+      "type": "i-i-s-domashnee-zadanie-t-country",
+      "flexberryType": "tCountry",
+      "notNull": false,
+      "defaultValue": "Empty",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PassportE",
+      "modelName": "i-i-s-domashnee-zadanie-passport",
+      "attrs": [
+        {
+          "name": "lastNameLat",
+          "caption": "Last name lat",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "firstNameLat",
+          "caption": "First name lat",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "secondNameLat",
+          "caption": "Second name lat",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "dateOfBirth",
+          "caption": "Date of birth",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "placeOfBirth",
+          "caption": "Place of birth",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "dateOfIssue",
+          "caption": "Date of issue",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "validUntil",
+          "caption": "Valid until",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "numberSeries",
+          "caption": "Number series",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "country",
+          "caption": "Country",
+          "hidden": false,
+          "index": 9
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "PassportL",
+      "modelName": "i-i-s-domashnee-zadanie-passport",
+      "attrs": [
+        {
+          "name": "lastNameLat",
+          "caption": "Last name lat",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "firstNameLat",
+          "caption": "First name lat",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "secondNameLat",
+          "caption": "Second name lat",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "dateOfBirth",
+          "caption": "Date of birth",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "placeOfBirth",
+          "caption": "Place of birth",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "dateOfIssue",
+          "caption": "Date of issue",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "validUntil",
+          "caption": "Valid until",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "numberSeries",
+          "caption": "Number series",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "country",
+          "caption": "Country",
+          "hidden": false,
+          "index": 9
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

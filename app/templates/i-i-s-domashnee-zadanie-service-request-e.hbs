@@ -1,0 +1,180 @@
+<h3 class="ui header">{{t "forms.i-i-s-domashnee-zadanie-service-request-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field" data-test-i-i-s-domashnee-zadanie-service-request-e-----="true">
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.type-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-domashnee-zadanie-t-service-request-type")
+      value=model.type
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "type" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.number
+      class=(if (v-get validationObject "number" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.number-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e-------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "number" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.date
+      class=(if (v-get validationObject "date" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.date-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e-----=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "date" "messages")}}
+  </div>
+  <div class="field" data-test-i-i-s-domashnee-zadanie-service-request-e-------="true">
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.status-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-domashnee-zadanie-t-service-request-status")
+      value=model.status
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "status" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.permanentAddress
+      class=(if (v-get validationObject "permanentAddress" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.permanentAddress-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e-----------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "permanentAddress" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.phoneNumber
+      class=(if (v-get validationObject "phoneNumber" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.phoneNumber-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "phoneNumber" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.iNN
+      class=(if (v-get validationObject "iNN" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.iNN-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e----=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "iNN" "messages")}}
+  </div>
+  <div class="field" data-test-i-i-s-domashnee-zadanie-service-request-e-----------------------="true">
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.serviceRequestDecision-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-domashnee-zadanie-t-service-request-decision")
+      value=model.serviceRequestDecision
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "serviceRequestDecision" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.decisionDate
+      class=(if (v-get validationObject "decisionDate" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.decisionDate-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e-------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "decisionDate" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.profession-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.profession
+      relationName="profession"
+      projection="ProfessionL"
+      title=(t "forms.i-i-s-domashnee-zadanie-service-request-e.profession-caption")
+      readonly=readonly
+      componentName="professionLookup"
+      data-test-i-i-s-domashnee-zadanie-service-request-e-----------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "profession" "messages")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.profession.name
+      class=(if (v-get validationObject "profession.name" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.profession.name-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e----------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "profession.name" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.passport-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.passport
+      relationName="passport"
+      projection="PassportL"
+      title=(t "forms.i-i-s-domashnee-zadanie-service-request-e.passport-caption")
+      readonly=readonly
+      componentName="passportLookup"
+      data-test-i-i-s-domashnee-zadanie-service-request-e---------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "passport" "messages")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.passport.lastNameLat
+      class=(if (v-get validationObject "passport.lastNameLat" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-service-request-e.passport.lastNameLat-caption")
+      data-test-i-i-s-domashnee-zadanie-service-request-e---------------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "passport.lastNameLat" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-domashnee-zadanie-service-request-e.patent-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="patentGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.patent
+      content=model.patent
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "patent" "isInvalid") "error")
+      data-test-i-i-s-domashnee-zadanie-service-request-e-------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "patent" "messages")}}
+  </div>
+</form>

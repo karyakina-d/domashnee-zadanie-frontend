@@ -1,0 +1,9 @@
+﻿{
+  "nameSpace": "IIS.Domashnee_zadanie",
+  "className": "tServiceRequestType",
+  "enumObjects": {
+    "Empty": null,
+    "PatentIssue": null,
+    "PatentReIssue": null
+  }
+}

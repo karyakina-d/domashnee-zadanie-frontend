@@ -1,0 +1,126 @@
+<h3 class="ui header">{{t "forms.i-i-s-domashnee-zadanie-passport-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.lastNameLat
+      class=(if (v-get validationObject "lastNameLat" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.lastNameLat-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "lastNameLat" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.firstNameLat
+      class=(if (v-get validationObject "firstNameLat" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.firstNameLat-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e-------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "firstNameLat" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.secondNameLat
+      class=(if (v-get validationObject "secondNameLat" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.secondNameLat-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e--------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "secondNameLat" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.sex
+      class=(if (v-get validationObject "sex" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.sex-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e----=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "sex" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.dateOfBirth
+      class=(if (v-get validationObject "dateOfBirth" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.dateOfBirth-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "dateOfBirth" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.placeOfBirth
+      class=(if (v-get validationObject "placeOfBirth" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.placeOfBirth-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e-------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "placeOfBirth" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.dateOfIssue
+      class=(if (v-get validationObject "dateOfIssue" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.dateOfIssue-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "dateOfIssue" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.validUntil
+      class=(if (v-get validationObject "validUntil" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.validUntil-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e-----------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "validUntil" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.numberSeries
+      class=(if (v-get validationObject "numberSeries" "isInvalid") "error")
+      label=(t "forms.i-i-s-domashnee-zadanie-passport-e.numberSeries-caption")
+      data-test-i-i-s-domashnee-zadanie-passport-e-------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "numberSeries" "messages")}}
+  </div>
+  <div class="field" data-test-i-i-s-domashnee-zadanie-passport-e--------="true">
+    <label>{{t "forms.i-i-s-domashnee-zadanie-passport-e.country-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-domashnee-zadanie-t-country")
+      value=model.country
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "country" "messages")}}
+  </div>
+</form>

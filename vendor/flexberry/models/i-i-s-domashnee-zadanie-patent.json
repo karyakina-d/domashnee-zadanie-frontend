@@ -1,0 +1,122 @@
+﻿{
+  "name": "IISDomashnee_zadaniePatent",
+  "modelName": "i-i-s-domashnee-zadanie-patent",
+  "className": "Patent",
+  "nameSpace": "IIS.Domashnee_zadanie",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "series",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "number",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "validUntil",
+      "type": "string",
+      "flexberryType": "date",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "issueDate",
+      "type": "string",
+      "flexberryType": "date",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "profession",
+      "relatedTo": "i-i-s-domashnee-zadanie-profession",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "serviceRequest",
+      "relatedTo": "i-i-s-domashnee-zadanie-service-request",
+      "inverse": "patent"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PatentE",
+      "modelName": "i-i-s-domashnee-zadanie-patent",
+      "attrs": [
+        {
+          "name": "series",
+          "caption": "Series",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "number",
+          "caption": "Number",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "validUntil",
+          "caption": "Valid until",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "issueDate",
+          "caption": "Issue date",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Profession",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Profession",
+          "name": "profession",
+          "relatedTo": "i-i-s-domashnee-zadanie-profession",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

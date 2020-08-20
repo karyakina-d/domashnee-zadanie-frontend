@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISDomashnee_zadanieProfession",
+  "modelName": "i-i-s-domashnee-zadanie-profession",
+  "className": "Profession",
+  "nameSpace": "IIS.Domashnee_zadanie",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ProfessionE",
+      "modelName": "i-i-s-domashnee-zadanie-profession",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ProfessionL",
+      "modelName": "i-i-s-domashnee-zadanie-profession",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

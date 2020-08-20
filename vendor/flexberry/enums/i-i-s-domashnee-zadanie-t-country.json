@@ -1,0 +1,12 @@
+﻿{
+  "nameSpace": "IIS.Domashnee_zadanie",
+  "className": "tCountry",
+  "enumObjects": {
+    "Empty": null,
+    "UZB": null,
+    "TJK": null,
+    "MDA": null,
+    "AZE": null,
+    "UKR": null
+  }
+}

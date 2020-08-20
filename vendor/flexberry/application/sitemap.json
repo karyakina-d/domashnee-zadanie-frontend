@@ -1,0 +1,52 @@
+﻿{
+  "applicationCaption": "Domashnee_zadanie",
+  "applicationTitle": "Domashnee_zadanie",
+  "items": [
+    {
+      "link": null,
+      "menuName": "domashnee-zadanie",
+      "caption": "Domashnee_zadanie",
+      "title": "Domashnee_zadanie",
+      "children": [
+        {
+          "link": "i-i-s-domashnee-zadanie-service-request-l",
+          "menuName": null,
+          "caption": "Обращения",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": null,
+          "menuName": "документы",
+          "caption": "Документы",
+          "title": "Документы",
+          "children": [
+            {
+              "link": "i-i-s-domashnee-zadanie-passport-l",
+              "menuName": null,
+              "caption": "Паспорта",
+              "title": "",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "справочники",
+          "caption": "Справочники",
+          "title": "Справочники",
+          "children": [
+            {
+              "link": "i-i-s-domashnee-zadanie-profession-l",
+              "menuName": null,
+              "caption": "Профессии",
+              "title": "",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
