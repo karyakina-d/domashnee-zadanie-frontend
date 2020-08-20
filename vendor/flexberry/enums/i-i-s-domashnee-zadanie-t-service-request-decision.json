@@ -1,9 +1,0 @@
-﻿{
-  "nameSpace": "IIS.Domashnee_zadanie",
-  "className": "tServiceRequestDecision",
-  "enumObjects": {
-    "Empty": null,
-    "Agreement": null,
-    "Rejection": null
-  }
-}
